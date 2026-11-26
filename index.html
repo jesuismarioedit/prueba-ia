@@ -2,9 +2,188 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Prueba Agente IA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Tech Landing</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 10%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            padding: 8rem 10% 4rem;
+            text-align: center;
+            background: radial-gradient(circle at top right, #eef2ff, transparent);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            background: linear-gradient(90deg, var(--dark), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.39);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 5rem 10%;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid #f1f5f9;
+            transition: border-color 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: var(--gray);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Página inicial de prueba</h1>
+
+    <nav>
+        <a href="#" class="logo">TECH.CORE</a>
+        <div class="nav-links">
+            <a href="#features">Servicios</a>
+            <a href="#about">Nosotros</a>
+            <a href="#contact">Contacto</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Transformación Digital Sin Límites</h1>
+        <p>Creamos soluciones innovadoras, escalables y centradas en el usuario para impulsar el futuro de tu negocio.</p>
+        <a href="#" class="btn btn-primary">Comenzar Proyecto</a>
+    </header>
+
+    <section class="features" id="features">
+        <div class="card">
+            <h3>Diseño UX/UI</h3>
+            <p>Interfaces intuitivas que cautivan y convierten, diseñadas con los estándares más altos de usabilidad.</p>
+        </div>
+        <div class="card">
+            <h3>Desarrollo Cloud</h3>
+            <p>Infraestructura robusta y escalable en la nube para garantizar disponibilidad total 24/7.</p>
+        </div>
+        <div class="card">
+            <h3>Inteligencia Artificial</h3>
+            <p>Implementamos modelos predictivos y automatización avanzada para optimizar tus procesos.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 TechCore Solutions. Todos los derechos reservados.
+    </footer>
+
 </body>
 </html>
